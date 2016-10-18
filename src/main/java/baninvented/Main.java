@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.ByteBuffer;
+import java.nio.channels.FileChannel;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -27,6 +28,8 @@ import com.googlecode.mp4parser.authoring.builder.FragmentedMp4Builder;
 import com.googlecode.mp4parser.authoring.builder.Fragmenter;
 import com.googlecode.mp4parser.authoring.builder.TimeBasedFragmenter;
 import com.jamesmurty.utils.XMLBuilder2;
+
+import baninvented.IsoTypeWriter;
 
 
 public class Main {
@@ -73,16 +76,67 @@ public class Main {
 
 	}
 
+	public static class DASHEventMessageBox extends AbstractBox {
+
+		private String scheme_id_uri;
+		private String value;
+		private long timescale;
+		private long presentation_time_delta;
+		private long event_duration;
+		private long id;
+		private String message_data;
+
+		protected DASHEventMessageBox(String scheme_id_uri, String value, long timescale, long presentation_time_delta, long event_duration, long id, String message_data) {
+			super("emsg");
+			this.scheme_id_uri = scheme_id_uri;
+			this.value = value;
+			this.timescale = timescale;
+			this.presentation_time_delta = presentation_time_delta;
+			this.event_duration = event_duration;
+			this.id = id;
+			this.message_data = message_data;
+		}
+
+		@Override protected long getContentSize() {
+			ByteBuffer byteBuffer = ByteBuffer.allocate(4096);
+			getContent(byteBuffer);
+			return byteBuffer.position();
+		}
+
+		@Override
+		protected void getContent(ByteBuffer byteBuffer) {
+			IsoTypeWriter.writeUtf8String(byteBuffer, scheme_id_uri);
+			IsoTypeWriter.writeUtf8String(byteBuffer, value);
+			IsoTypeWriter.writeUInt32(byteBuffer, timescale);
+			IsoTypeWriter.writeUInt32(byteBuffer, presentation_time_delta);
+			IsoTypeWriter.writeUInt32(byteBuffer, event_duration);
+			IsoTypeWriter.writeUInt32(byteBuffer, id);
+			IsoTypeWriter.writeUtf8String(byteBuffer, message_data);
+		}
+
+		@Override
+		protected void _parseDetails(ByteBuffer content) {
+			scheme_id_uri = IsoTypeReader.readString(content);
+			value = IsoTypeReader.readString(content);
+			timescale = IsoTypeReader.readUInt32(content);
+			presentation_time_delta = IsoTypeReader.readUInt32(content);
+			event_duration = IsoTypeReader.readUInt32(content);
+			id = IsoTypeReader.readUInt32(content);
+			message_data = IsoTypeReader.readString(content);
+		}
+
+	}
+
 	public static class Meta {
 		private long from;
 		private long to;
-		private String text;
+		private DASHEventMessageBox box;
 		
-		public Meta(long from, long to, String text) {
+		public Meta(long from, long to, DASHEventMessageBox box) {
 			super();
 			this.from = from;
 			this.to = to;
-			this.text = text;
+			this.box = box;
 		}
 
 		public long getFrom() {
@@ -91,8 +145,8 @@ public class Main {
 		public long getTo() {
 			return to;
 		}
-		public String getText() {
-			return text;
+		public DASHEventMessageBox getBox() {
+			return box;
 		}
 	}
 
@@ -115,7 +169,7 @@ public class Main {
 			TrackMetaData trackMetaData = new TrackMetaData();
 	        trackMetaData.setCreationTime(new Date());
 	        trackMetaData.setModificationTime(new Date());
-	        trackMetaData.setTimescale(TIMESCALE); // Text tracks use microseconds
+	        trackMetaData.setTimescale(TIMESCALE);
 	        return trackMetaData;
 		}
 		
@@ -174,16 +228,9 @@ public class Main {
 				} else if (silentTime < 0) {
 					throw new RuntimeException("Metadata times may not intersect");
 				}
-				ByteArrayOutputStream baos = new ByteArrayOutputStream();
-				DataOutputStream dos = new DataOutputStream(baos);
-				try {
-					dos.writeShort(Utf8.utf8StringLengthInBytes(meta.text));
-					dos.write(Utf8.convert(meta.text));
-					dos.close();
-				} catch (IOException e) {
-					throw new Error(e);
-				}
-				samples.add(new SampleImpl(ByteBuffer.wrap(baos.toByteArray())));
+				ByteBuffer byteBuffer = ByteBuffer.allocate((int)meta.getBox().getContentSize());
+				meta.getBox().getContent(byteBuffer);
+				samples.add(new SampleImpl(byteBuffer));
 				lastEnd = meta.to;
 			}
 			return samples;
@@ -233,7 +280,7 @@ public class Main {
 		return t.getTime() * TIMESCALE / MILLIS - EPOCH_TIMESTAMP_UTC;
 	}
 
-	private static MetaTrackImpl createMetadataTrack(IntentToEnd end) {
+	private static MetaTrackImpl createMetadataTrack(IntentToEnd end) throws IOException {
 		// we start publishing in-band events from the given publish-time onwards (on the media timeline)
 		// all these events refer to the same end-time
 		// the first emitted in-band event instance will be contained within
@@ -247,14 +294,14 @@ public class Main {
 		MetaTrackImpl metaTrack = new MetaTrackImpl();
 		System.out.println("Chosen publishTime is " + publishTimeInMediaTime);
 		System.out.println("Chosen endTime is " + endTimeInMediaTimeline);
+		System.out.println("Chosen fragmentCount is " + fragmentCount);
 		long fragmentTimestamp = firstFragmentTimestamp;
 		// Clients use event identifiers to spot when an event they've seen
 		// serialised in an earlier fragment is repeated in a later fragment.
 		// when we 
 		final long eventId = 1;
-		SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS");
+		SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
 		String timestamp = fmt.format(end.getEndTime());
-		final byte[] inbandEventDataPayload = Utf8.convert(timestamp);
 		for (int i=0; i<fragmentCount; i++) {
 			// presentationTimeDelta being non-zero indicates that, rather than
 			// the event occurring at the timestamp of the containing fragment,
@@ -265,28 +312,33 @@ public class Main {
 			long presentationTimeDelta = endTimeInMediaTimeline - fragmentTimestamp;
 			Meta meta = new Meta(fragmentTimestamp,
 			                     fragmentTimestamp+fragDurationInMediaTime,
-			                     createMetadataDoc("urn:mpeg:dash:event:2012", eventId, presentationTimeDelta , inbandEventDataPayload));
+			                     createMetadataDoc("urn:mpeg:dash:event:2012", eventId, presentationTimeDelta, timestamp));
 			System.out.println("Timestamp: "+fragmentTimestamp);
-			System.out.println(meta.getText());
+			System.out.println(meta.getBox().getContentSize());
 			metaTrack.getMetadataEntries().add(meta);
+
+			ByteBuffer byteBuffer = ByteBuffer.allocateDirect((int)meta.getBox().getContentSize());
+			meta.getBox().getContent(byteBuffer);
+			File emsgFile = new File("/tmp/emsg_" + i + ".bin");
+			FileChannel channel = new FileOutputStream(emsgFile, false).getChannel();
+			byteBuffer.flip();
+			channel.write(byteBuffer);
+			channel.close();
+
 			fragmentTimestamp += fragDurationInMediaTime;
 		}
 		return metaTrack;
 	}
 
-	private static String createMetadataDoc(String scheme, long id, long presentationTimeDelta, byte[] messageData) {
-		// TODO: jaxb instead
-		XMLBuilder2 doc = XMLBuilder2.create("meta");
-		doc.e("event")
-		    .ns("http://www.bbc.co.uk/mediaservices/dash/2016/event")
-			.a("scheme_id_uri", scheme)
-			.a("timescale", ""+TIMESCALE)
-			.a("presentation_time_delta", ""+presentationTimeDelta)
-			.a("event_duration", "0")
-			.a("id", ""+id)
-			.e("value").text("1").up()  // TODO: what is 'value' for?
-			.e("message_data").text(Hex.encodeHex(messageData));
-		return asString(doc);
+	private static DASHEventMessageBox createMetadataDoc(String scheme, long id, long presentationTimeDelta, String messageData) {
+		return new DASHEventMessageBox(
+			"http://www.bbc.co.uk/mediaservices/dash/2016/event",
+			"1",
+			TIMESCALE,
+			presentationTimeDelta,
+			0,
+			id,
+			messageData);
 	}
 
 	private static LiveServerManifestBox createManifestBox(TrackMetaData trackMetaData) {
