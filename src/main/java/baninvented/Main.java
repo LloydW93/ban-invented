@@ -332,7 +332,7 @@ public class Main {
 
 	private static DASHEventMessageBox createMetadataDoc(String scheme, long id, long presentationTimeDelta, String messageData) {
 		return new DASHEventMessageBox(
-			"http://www.bbc.co.uk/mediaservices/dash/2016/event",
+			scheme,
 			"1",
 			TIMESCALE,
 			presentationTimeDelta,
