@@ -228,8 +228,9 @@ public class Main {
 				} else if (silentTime < 0) {
 					throw new RuntimeException("Metadata times may not intersect");
 				}
-				ByteBuffer byteBuffer = ByteBuffer.allocate((int)meta.getBox().getContentSize());
+				ByteBuffer byteBuffer = ByteBuffer.allocateDirect((int)meta.getBox().getContentSize());
 				meta.getBox().getContent(byteBuffer);
+				byteBuffer.flip();
 				samples.add(new SampleImpl(byteBuffer));
 				lastEnd = meta.to;
 			}
