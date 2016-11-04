@@ -19,6 +19,7 @@ import com.coremedia.iso.Utf8;
 import com.coremedia.iso.boxes.Container;
 import com.coremedia.iso.boxes.SampleDescriptionBox;
 import com.googlecode.mp4parser.AbstractBox;
+import com.googlecode.mp4parser.AbstractFullBox;
 import com.googlecode.mp4parser.authoring.AbstractTrack;
 import com.googlecode.mp4parser.authoring.Movie;
 import com.googlecode.mp4parser.authoring.Sample;
@@ -27,6 +28,7 @@ import com.googlecode.mp4parser.authoring.TrackMetaData;
 import com.googlecode.mp4parser.authoring.builder.FragmentedMp4Builder;
 import com.googlecode.mp4parser.authoring.builder.Fragmenter;
 import com.googlecode.mp4parser.authoring.builder.TimeBasedFragmenter;
+import com.googlecode.mp4parser.util.ByteBufferByteChannel;
 import com.jamesmurty.utils.XMLBuilder2;
 
 import baninvented.IsoTypeWriter;
@@ -34,7 +36,7 @@ import baninvented.IsoTypeWriter;
 
 public class Main {
 
-	private static final int TIMESCALE = 1_000_000;
+	private static final int TIMESCALE = 10_000_000;
 	private static final int FRAGMENT_DURATION_SECONDS = 8;
 	private static final long EPOCH_TIMESTAMP_UTC = 0;
 	
@@ -76,7 +78,7 @@ public class Main {
 
 	}
 
-	public static class DASHEventMessageBox extends AbstractBox {
+	public static class DASHEventMessageBox extends AbstractFullBox {
 
 		private String scheme_id_uri;
 		private String value;
@@ -105,6 +107,7 @@ public class Main {
 
 		@Override
 		protected void getContent(ByteBuffer byteBuffer) {
+			writeVersionAndFlags(byteBuffer);
 			IsoTypeWriter.writeUtf8String(byteBuffer, scheme_id_uri);
 			IsoTypeWriter.writeUtf8String(byteBuffer, value);
 			IsoTypeWriter.writeUInt32(byteBuffer, timescale);
@@ -228,8 +231,12 @@ public class Main {
 				} else if (silentTime < 0) {
 					throw new RuntimeException("Metadata times may not intersect");
 				}
-				ByteBuffer byteBuffer = ByteBuffer.allocateDirect((int)meta.getBox().getContentSize());
-				meta.getBox().getContent(byteBuffer);
+				ByteBuffer byteBuffer = ByteBuffer.allocateDirect((int)meta.getBox().getContentSize() + 8);
+				try {
+					meta.getBox().getBox(new ByteBufferByteChannel(byteBuffer));
+				} catch (IOException e) {
+
+				}
 				byteBuffer.flip();
 				samples.add(new SampleImpl(byteBuffer));
 				lastEnd = meta.to;
@@ -278,7 +285,8 @@ public class Main {
 	
 	private static long millisToMediaTime(Date t) {
 		final long MILLIS = 1000;
-		return t.getTime() * TIMESCALE / MILLIS - EPOCH_TIMESTAMP_UTC;
+		// division in brackets so we don't overflow an int64
+		return t.getTime() * (TIMESCALE / MILLIS) - EPOCH_TIMESTAMP_UTC;
 	}
 
 	private static MetaTrackImpl createMetadataTrack(IntentToEnd end) throws IOException {
@@ -314,16 +322,14 @@ public class Main {
 			Meta meta = new Meta(fragmentTimestamp,
 			                     fragmentTimestamp+fragDurationInMediaTime,
 			                     createMetadataDoc("urn:mpeg:dash:event:2012", eventId, presentationTimeDelta, timestamp));
+			int metaSize = (int)meta.getBox().getContentSize();
 			System.out.println("Timestamp: "+fragmentTimestamp);
-			System.out.println(meta.getBox().getContentSize());
+			System.out.println(metaSize);
 			metaTrack.getMetadataEntries().add(meta);
 
-			ByteBuffer byteBuffer = ByteBuffer.allocateDirect((int)meta.getBox().getContentSize());
-			meta.getBox().getContent(byteBuffer);
 			File emsgFile = new File("/tmp/emsg_" + i + ".bin");
 			FileChannel channel = new FileOutputStream(emsgFile, false).getChannel();
-			byteBuffer.flip();
-			channel.write(byteBuffer);
+			meta.getBox().getBox(channel);
 			channel.close();
 
 			fragmentTimestamp += fragDurationInMediaTime;
