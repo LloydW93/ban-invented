@@ -16,8 +16,7 @@ import java.util.Properties;
 import com.coremedia.iso.Hex;
 import com.coremedia.iso.IsoTypeReader;
 import com.coremedia.iso.Utf8;
-import com.coremedia.iso.boxes.Container;
-import com.coremedia.iso.boxes.SampleDescriptionBox;
+import com.coremedia.iso.boxes.*;
 import com.googlecode.mp4parser.AbstractBox;
 import com.googlecode.mp4parser.AbstractFullBox;
 import com.googlecode.mp4parser.authoring.AbstractTrack;
@@ -25,23 +24,21 @@ import com.googlecode.mp4parser.authoring.Movie;
 import com.googlecode.mp4parser.authoring.Sample;
 import com.googlecode.mp4parser.authoring.SampleImpl;
 import com.googlecode.mp4parser.authoring.TrackMetaData;
-import com.googlecode.mp4parser.authoring.builder.FragmentedMp4Builder;
+import com.googlecode.mp4parser.authoring.builder.DefaultFragmenterImpl;
 import com.googlecode.mp4parser.authoring.builder.Fragmenter;
-import com.googlecode.mp4parser.authoring.builder.TimeBasedFragmenter;
+import com.googlecode.mp4parser.authoring.Track;
 import com.googlecode.mp4parser.util.ByteBufferByteChannel;
 import com.jamesmurty.utils.XMLBuilder2;
 
 import baninvented.IsoTypeWriter;
-
+import baninvented.EmsgFragmentedMp4Builder;
+import baninvented.URIMetaSampleEntry;
 
 public class Main {
 
 	private static final int TIMESCALE = 10_000_000;
 	private static final int FRAGMENT_DURATION_SECONDS = 8;
 	private static final long EPOCH_TIMESTAMP_UTC = 0;
-	
-
-	// mp4parser doesn't have an implementation of LiveServerManifestBox
 
 	/**
 	 * The LiveServerManifestBox field and related fields comprise the data that
@@ -162,18 +159,19 @@ public class Main {
 
 		public MetaTrackImpl() {
 			super("timed metadata?");
-	        sampleDescriptionBox = new SampleDescriptionBox();
-	        metas = new LinkedList<Meta>();
+			sampleDescriptionBox = new SampleDescriptionBox();
+			//sampleDescriptionBox.addBox(new URIMetaSampleEntry("http://www.bbc.co.uk/2016/dash/emsg"));
+			metas = new LinkedList<Meta>();
 
-	        trackMetaData = createMetadata();
+			trackMetaData = createMetadata();
 		}
 
 		private static TrackMetaData createMetadata() {
 			TrackMetaData trackMetaData = new TrackMetaData();
-	        trackMetaData.setCreationTime(new Date());
-	        trackMetaData.setModificationTime(new Date());
-	        trackMetaData.setTimescale(TIMESCALE);
-	        return trackMetaData;
+			trackMetaData.setCreationTime(new Date());
+			trackMetaData.setModificationTime(new Date());
+			trackMetaData.setTimescale(TIMESCALE);
+			return trackMetaData;
 		}
 		
 		public List<Meta> getMetadataEntries() {
@@ -182,37 +180,34 @@ public class Main {
 
 		@Override
 		public SampleDescriptionBox getSampleDescriptionBox() {
-	        return sampleDescriptionBox;
+			return sampleDescriptionBox;
 		}
 
 		@Override
 		public long[] getSampleDurations() {
-	        List<Long> decTimes = new ArrayList<Long>();
+			List<Long> decTimes = new ArrayList<Long>();
 
-	        long lastEnd = 0;
-	        for (Meta meta : metas) {
-	            long silentTime = meta.from - lastEnd;
-	            if (silentTime > 0) {
-
-	                decTimes.add(silentTime);
-	            } else if (silentTime < 0) {
-	            	// TODO: can we actually allow overlapping samples?
-	                throw new Error("Metadata times may not intersect");
-	            }
-	            decTimes.add( meta.to - meta.from);
-	            lastEnd = meta.to;
-	        }
-	        long[] decTimesArray = new long[decTimes.size()];
-	        int index = 0;
-	        for (Long decTime : decTimes) {
-	            decTimesArray[index++] = decTime;
-	        }
-	        return decTimesArray;
+			long lastEnd = 0;
+			for (Meta meta : metas) {
+				long silentTime = meta.from - lastEnd;
+				if (silentTime < 0) {
+					// TODO: can we actually allow overlapping samples?
+					throw new Error("Metadata times may not intersect");
+				}
+				decTimes.add( meta.to - meta.from);
+				lastEnd = meta.to;
+			}
+			long[] decTimesArray = new long[decTimes.size()];
+			int index = 0;
+			for (Long decTime : decTimes) {
+				decTimesArray[index++] = decTime;
+			}
+			return decTimesArray;
 		}
 
 		@Override
 		public TrackMetaData getTrackMetaData() {
-	        return trackMetaData;
+			return trackMetaData;
 		}
 
 		@Override
@@ -226,9 +221,7 @@ public class Main {
 			long lastEnd = 0;
 			for (Meta meta : metas) {
 				long silentTime = meta.from - lastEnd;
-				if (silentTime > 0) {
-					samples.add(new SampleImpl(ByteBuffer.wrap(new byte[]{0, 0})));
-				} else if (silentTime < 0) {
+				if (silentTime < 0) {
 					throw new RuntimeException("Metadata times may not intersect");
 				}
 				ByteBuffer byteBuffer = ByteBuffer.allocateDirect((int)meta.getBox().getContentSize() + 8);
@@ -271,13 +264,11 @@ public class Main {
 		// any MPD files retrieved just now which still include the old @publishTime value 
 		// will have expired by the time that the in-band events indicated an MPD reload is needed
 		IntentToEnd end = new IntentToEnd(new Date(now + 120*1000), new Date(now + 180*1000));
-		MetaTrackImpl metaTrack = createMetadataTrack(end);
+		EmsgFragmentedMp4Builder builder = new EmsgFragmentedMp4Builder();
+		MetaTrackImpl metaTrack = createMetadataTrack(end, builder);
 		Movie movie = new Movie();
 		movie.addTrack(metaTrack);
-		FragmentedMp4Builder builder = new FragmentedMp4Builder();
-		Fragmenter f = new TimeBasedFragmenter(movie, FRAGMENT_DURATION_SECONDS);
-		//builder.setFragmenter(new DefaultFragmenterImpl(FRAGMENT_DURATION_SECONDS));
-		builder.setIntersectionFinder(f);
+		builder.setFragmenter(new DefaultFragmenterImpl(FRAGMENT_DURATION_SECONDS));
 		Container mp4file = builder.build(movie);
 		mp4file.getBoxes().add(1, createManifestBox(metaTrack.getTrackMetaData()));
 		writeOut(mp4file);
@@ -289,7 +280,7 @@ public class Main {
 		return t.getTime() * (TIMESCALE / MILLIS) - EPOCH_TIMESTAMP_UTC;
 	}
 
-	private static MetaTrackImpl createMetadataTrack(IntentToEnd end) throws IOException {
+	private static MetaTrackImpl createMetadataTrack(IntentToEnd end, EmsgFragmentedMp4Builder builder) throws IOException {
 		// we start publishing in-band events from the given publish-time onwards (on the media timeline)
 		// all these events refer to the same end-time
 		// the first emitted in-band event instance will be contained within
@@ -301,6 +292,7 @@ public class Main {
 		final long firstFragmentTimestamp = publishTimeInMediaTime - publishTimeWithinFragment;
 		final long fragmentCount = 1 + (millisToMediaTime(end.getEndTime()) - firstFragmentTimestamp) / fragDurationInMediaTime;
 		MetaTrackImpl metaTrack = new MetaTrackImpl();
+		builder.setOffset(firstFragmentTimestamp);
 		System.out.println("Chosen publishTime is " + publishTimeInMediaTime);
 		System.out.println("Chosen endTime is " + endTimeInMediaTimeline);
 		System.out.println("Chosen fragmentCount is " + fragmentCount);
@@ -320,8 +312,8 @@ public class Main {
 			// were given,
 			long presentationTimeDelta = endTimeInMediaTimeline - fragmentTimestamp;
 			Meta meta = new Meta(fragmentTimestamp,
-			                     fragmentTimestamp+fragDurationInMediaTime,
-			                     createMetadataDoc("urn:mpeg:dash:event:2012", eventId, presentationTimeDelta, timestamp));
+								 fragmentTimestamp+fragDurationInMediaTime,
+								 createMetadataDoc("urn:mpeg:dash:event:2012", eventId, presentationTimeDelta, timestamp));
 			int metaSize = (int)meta.getBox().getContentSize();
 			System.out.println("Timestamp: "+fragmentTimestamp);
 			System.out.println(metaSize);
