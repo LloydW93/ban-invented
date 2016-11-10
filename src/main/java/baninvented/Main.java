@@ -160,7 +160,7 @@ public class Main {
 		public MetaTrackImpl() {
 			super("timed metadata?");
 			sampleDescriptionBox = new SampleDescriptionBox();
-			//sampleDescriptionBox.addBox(new URIMetaSampleEntry("http://www.bbc.co.uk/2016/dash/emsg"));
+			sampleDescriptionBox.addBox(new URIMetaSampleEntry("http://www.bbc.co.uk/2016/dash/emsg"));
 			metas = new LinkedList<Meta>();
 
 			trackMetaData = createMetadata();
