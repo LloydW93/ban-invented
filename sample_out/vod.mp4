@@ -1,0 +1,745 @@
+ ./ms5-redundant-phase1.sh live
+n-series-wifi
+Params: service=
+media_set=^n-series-wifi$
+supplier=
+server=
+MAP=
+update_attr=
+update_value=
+Deleting: n-series-wifi|v_od_p002|iplayer_streaming_n95_wifi|uk|sis|||http
+n-series
+Params: service=
+media_set=^n-series$
+supplier=
+server=
+MAP=
+update_attr=
+update_value=
+Deleting: n-series|v_od_p001|iplayer_streaming_n95_3g|uk|sis|||http
+Deleting: n-series|v_od_p002|iplayer_streaming_n95_wifi|uk|sis|||http
+pc-bigscreen
+Params: service=
+media_set=^pc-bigscreen$
+supplier=
+server=
+MAP=
+update_attr=
+update_value=
+Deleting: pc-bigscreen|a_od_p003|iplayer_uk_stream_aac_rtmp_lo_concrete|uk|limelight|bbc_1xtra||rtmp
+Deleting: pc-bigscreen|a_od_p003|iplayer_uk_stream_aac_rtmp_lo_concrete|uk|limelight|bbc_6music||rtmp
+Deleting: pc-bigscreen|a_od_p003|iplayer_uk_stream_aac_rtmp_lo_concrete|uk|limelight|bbc_7||rtmp
+Deleting: pc-bigscreen|a_od_p003|iplayer_uk_stream_aac_rtmp_lo_concrete|uk|limelight|bbc_asian_network||rtmp
+Deleting: pc-bigscreen|a_od_p003|iplayer_uk_stream_aac_rtmp_lo_concrete|uk|limelight|bbc_radio_five_live||rtmp
+Deleting: pc-bigscreen|a_od_p003|iplayer_uk_stream_aac_rtmp_lo_concrete|uk|limelight|bbc_radio_five_live_sports_extra||rtmp
+Deleting: pc-bigscreen|a_od_p003|iplayer_uk_stream_aac_rtmp_lo_concrete|uk|limelight|bbc_radio_four||rtmp
+Deleting: pc-bigscreen|a_od_p003|iplayer_uk_stream_aac_rtmp_lo_concrete|uk|limelight|bbc_radio_four_extra||rtmp
+Deleting: pc-bigscreen|a_od_p003|iplayer_uk_stream_aac_rtmp_lo_concrete|uk|limelight|bbc_radio_fourlw||rtmp
+Deleting: pc-bigscreen|a_od_p003|iplayer_uk_stream_aac_rtmp_lo_concrete|uk|limelight|bbc_radio_one||rtmp
+Deleting: pc-bigscreen|a_od_p003|iplayer_uk_stream_aac_rtmp_lo_concrete|uk|limelight|bbc_radio_three||rtmp
+Deleting: pc-bigscreen|a_od_p003|iplayer_uk_stream_aac_rtmp_lo_concrete|uk|limelight|bbc_radio_two||rtmp
+Deleting: pc-bigscreen|a_od_p003|iplayer_uk_stream_aac_rtmp_lo_concrete|uk|limelight|bbc_school_radio||rtmp
+Deleting: pc-bigscreen|a_od_p004|iplayer_intl_stream_aac_ws_concrete|world|akamai|||rtmp
+Deleting: pc-bigscreen|a_od_p004|iplayer_uk_stream_aac_rtmp_concrete|uk|limelight|bbc_1xtra||rtmp
+Deleting: pc-bigscreen|a_od_p004|iplayer_uk_stream_aac_rtmp_concrete|uk|limelight|bbc_6music||rtmp
+Deleting: pc-bigscreen|a_od_p004|iplayer_uk_stream_aac_rtmp_concrete|uk|limelight|bbc_7||rtmp
+Deleting: pc-bigscreen|a_od_p004|iplayer_uk_stream_aac_rtmp_concrete|uk|limelight|bbc_asian_network||rtmp
+Deleting: pc-bigscreen|a_od_p004|iplayer_uk_stream_aac_rtmp_concrete|uk|limelight|bbc_radio_five_live||rtmp
+Deleting: pc-bigscreen|a_od_p004|iplayer_uk_stream_aac_rtmp_concrete|uk|limelight|bbc_radio_five_live_sports_extra||rtmp
+Deleting: pc-bigscreen|a_od_p004|iplayer_uk_stream_aac_rtmp_concrete|uk|limelight|bbc_radio_four||rtmp
+Deleting: pc-bigscreen|a_od_p004|iplayer_uk_stream_aac_rtmp_concrete|uk|limelight|bbc_radio_four_extra||rtmp
+Deleting: pc-bigscreen|a_od_p004|iplayer_uk_stream_aac_rtmp_concrete|uk|limelight|bbc_radio_fourlw||rtmp
+Deleting: pc-bigscreen|a_od_p004|iplayer_uk_stream_aac_rtmp_concrete|uk|limelight|bbc_radio_one||rtmp
+Deleting: pc-bigscreen|a_od_p004|iplayer_uk_stream_aac_rtmp_concrete|uk|limelight|bbc_radio_three||rtmp
+Deleting: pc-bigscreen|a_od_p004|iplayer_uk_stream_aac_rtmp_concrete|uk|limelight|bbc_radio_two||rtmp
+Deleting: pc-bigscreen|a_od_p004|iplayer_uk_stream_aac_rtmp_concrete|uk|limelight|bbc_school_radio||rtmp
+Deleting: pc-bigscreen|a_od_p004|intl_ibroadcast_streaming_aac|nonuk|akamai|||rtmp
+Deleting: pc-bigscreen|a_od_p005|iplayer_intl_stream_mp3_lo|world|akamai|localradio||rtmp
+Deleting: pc-bigscreen|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_1xtra||rtmp
+Deleting: pc-bigscreen|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_6music||rtmp
+Deleting: pc-bigscreen|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_7||rtmp
+Deleting: pc-bigscreen|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_asian_network||rtmp
+Deleting: pc-bigscreen|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_cymru||rtmp
+Deleting: pc-bigscreen|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_five_live||rtmp
+Deleting: pc-bigscreen|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_five_live_sports_extra||rtmp
+Deleting: pc-bigscreen|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_four||rtmp
+Deleting: pc-bigscreen|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_fourlw||rtmp
+Deleting: pc-bigscreen|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_foyle||rtmp
+Deleting: pc-bigscreen|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_nan_gaidheal||rtmp
+Deleting: pc-bigscreen|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_one||rtmp
+Deleting: pc-bigscreen|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_orkney||rtmp
+Deleting: pc-bigscreen|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_scotland||rtmp
+Deleting: pc-bigscreen|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_scotland_fm||rtmp
+Deleting: pc-bigscreen|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_scotland_highlands_and_islands||rtmp
+Deleting: pc-bigscreen|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_scotland_mw||rtmp
+Deleting: pc-bigscreen|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_shetland||rtmp
+Deleting: pc-bigscreen|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_three||rtmp
+Deleting: pc-bigscreen|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_two||rtmp
+Deleting: pc-bigscreen|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_ulster||rtmp
+Deleting: pc-bigscreen|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_wales||rtmp
+Deleting: pc-bigscreen|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_wales_am||rtmp
+Deleting: pc-bigscreen|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_wales_fm||rtmp
+Deleting: pc-bigscreen|a_od_p006|iplayer_intl_stream_mp3|world|akamai|localradio||rtmp
+Deleting: pc-bigscreen|s_od_p001|captions|uk|http|||http
+Deleting: pc-bigscreen|s_od_p001|captions|uk|sis_closed|||https
+Deleting: pc-bigscreen|v_od_p005|iplayer_streaming_h264_flv_lo|uk|akamai_hds_vod|||http
+Deleting: pc-bigscreen|v_od_p005|iplayer_streaming_h264_flv_lo|uk|limelight|||rtmp
+Deleting: pc-bigscreen|v_od_p005|intl_ibroadcast_streaming_medium|nonuk|akamai|||rtmp
+Deleting: pc-bigscreen|v_od_p005|iplayer_streaming_h264_flv_lo|uk|akamai|||rtmp
+Deleting: pc-bigscreen|v_od_p006|iplayer_streaming_h264_flv|uk|akamai_hds_vod|||http
+Deleting: pc-bigscreen|v_od_p006|iplayer_streaming_h264_flv|uk|akamai|||rtmp
+Deleting: pc-bigscreen|v_od_p006|iplayer_streaming_h264_flv|uk|limelight|||rtmp
+Deleting: pc-bigscreen|v_od_p006|intl_ibroadcast_streaming_low|nonuk|akamai|||rtmp
+Deleting: pc-bigscreen|v_od_p007|iplayer_streaming_h264_flv_high|uk|akamai_hds_vod|||http
+Deleting: pc-bigscreen|v_od_p007|iplayer_streaming_h264_flv_high|uk|akamai|||rtmp
+Deleting: pc-bigscreen|v_od_p007|iplayer_streaming_h264_flv_high|uk|limelight|||rtmp
+Deleting: pc-bigscreen|v_od_p007|intl_ibroadcast_streaming_high|nonuk|akamai|||rtmp
+Deleting: pc-bigscreen|v_od_p023|iplayer_broadband_streaming|uk|akamai|||rtmp
+Deleting: pc-bigscreen|v_od_p023|iplayer_broadband_streaming|uk|limelight|||rtmp
+Deleting: pc-bigscreen|v_od_p023|intl_ibroadcast_streaming_low|nonuk|akamai|||rtmp
+Deleting: pc-bigscreen|v_od_p024|iplayer_streaming_h264_flv|uk|akamai_hds_vod|||http
+Deleting: pc-bigscreen|v_od_p024|iplayer_streaming_h264_flv|uk|akamai|||rtmp
+Deleting: pc-bigscreen|v_od_p024|iplayer_streaming_h264_flv|uk|limelight|||rtmp
+Deleting: pc-bigscreen|v_od_p024|intl_ibroadcast_streaming_medium|nonuk|akamai|||rtmp
+Deleting: pc-bigscreen|v_od_p025|iplayer_streaming_h264_flv_high|uk|akamai_hds_vod|||http
+Deleting: pc-bigscreen|v_od_p025|iplayer_streaming_h264_flv_high|uk|akamai|||rtmp
+Deleting: pc-bigscreen|v_od_p025|iplayer_streaming_h264_flv_high|uk|limelight|||rtmp
+Deleting: pc-bigscreen|v_od_p025|intl_ibroadcast_streaming_high|nonuk|akamai|||rtmp
+n-series-3g
+Params: service=
+media_set=^n-series-3g$
+supplier=
+server=
+MAP=
+update_attr=
+update_value=
+Deleting: n-series-3g|v_od_p001|iplayer_streaming_n95_3g|uk|sis|||http
+mobile-flash-standard
+Params: service=
+media_set=^mobile-flash-standard$
+supplier=
+server=
+MAP=
+update_attr=
+update_value=
+Deleting: mobile-flash-standard|v_od_p004|iplayer_streaming_h264_flv_vlo|uk|akamai_hls|||http
+Deleting: mobile-flash-standard|v_od_p004|iplayer_streaming_h264_flv_vlo|uk|akamai_hls_https|||https
+Deleting: mobile-flash-standard|v_od_p004|iplayer_streaming_h264_flv_vlo|uk|limelight|||rtmp
+Deleting: mobile-flash-standard|v_od_p004|iplayer_streaming_h264_flv_vlo|uk|akamai|||rtmp
+Deleting: mobile-flash-standard|v_od_p005|mobile_streaming_flv_low|uk|limelight|||rtmp
+Deleting: mobile-flash-standard|v_od_p005|mobile_streaming_flv_low|uk|akamai|||rtmp
+Deleting: mobile-flash-standard|v_od_p006|mobile_streaming_flv|uk|limelight|||rtmp
+Deleting: mobile-flash-standard|v_od_p006|mobile_streaming_flv|uk|akamai|||rtmp
+mobile-flash-low
+Params: service=
+media_set=^mobile-flash-low$
+supplier=
+server=
+MAP=
+update_attr=
+update_value=
+Deleting: mobile-flash-low|v_od_p004|iplayer_streaming_h264_flv_vlo|uk|akamai_hls|||http
+Deleting: mobile-flash-low|v_od_p004|iplayer_streaming_h264_flv_vlo|uk|akamai_hls_https|||https
+Deleting: mobile-flash-low|v_od_p004|iplayer_streaming_h264_flv_vlo|uk|limelight|||rtmp
+Deleting: mobile-flash-low|v_od_p004|iplayer_streaming_h264_flv_vlo|uk|akamai|||rtmp
+Deleting: mobile-flash-low|v_od_p005|mobile_streaming_flv_low|uk|limelight|||rtmp
+Deleting: mobile-flash-low|v_od_p005|mobile_streaming_flv_low|uk|akamai|||rtmp
+mobile-flash-high
+Params: service=
+media_set=^mobile-flash-high$
+supplier=
+server=
+MAP=
+update_attr=
+update_value=
+Deleting: mobile-flash-high|v_od_p004|iplayer_streaming_h264_flv_vlo|uk|akamai_hls|||http
+Deleting: mobile-flash-high|v_od_p004|iplayer_streaming_h264_flv_vlo|uk|akamai_hls_https|||https
+Deleting: mobile-flash-high|v_od_p004|iplayer_streaming_h264_flv_vlo|uk|limelight|||rtmp
+Deleting: mobile-flash-high|v_od_p004|iplayer_streaming_h264_flv_vlo|uk|akamai|||rtmp
+Deleting: mobile-flash-high|v_od_p005|mobile_streaming_flv_low|uk|limelight|||rtmp
+Deleting: mobile-flash-high|v_od_p005|mobile_streaming_flv_low|uk|akamai|||rtmp
+Deleting: mobile-flash-high|v_od_p006|mobile_streaming_flv|uk|limelight|||rtmp
+Deleting: mobile-flash-high|v_od_p006|mobile_streaming_flv|uk|akamai|||rtmp
+Deleting: mobile-flash-high|v_od_p007|mobile_streaming_flv_high|uk|limelight|||rtmp
+Deleting: mobile-flash-high|v_od_p007|mobile_streaming_flv_high|uk|akamai|||rtmp
+mobile-emp
+Params: service=
+media_set=^mobile-emp$
+supplier=
+server=
+MAP=
+update_attr=
+update_value=
+Deleting: mobile-emp|a_od_p004|iplayer_intl_stream_aac_ws_concrete|world|akamai|||rtmp
+Deleting: mobile-emp|a_od_p004|iplayer_uk_stream_aac_rtmp_concrete|uk|limelight|bbc_1xtra||rtmp
+Deleting: mobile-emp|a_od_p004|iplayer_uk_stream_aac_rtmp_concrete|uk|limelight|bbc_6music||rtmp
+Deleting: mobile-emp|a_od_p004|iplayer_uk_stream_aac_rtmp_concrete|uk|limelight|bbc_7||rtmp
+Deleting: mobile-emp|a_od_p004|iplayer_uk_stream_aac_rtmp_concrete|uk|limelight|bbc_asian_network||rtmp
+Deleting: mobile-emp|a_od_p004|iplayer_uk_stream_aac_rtmp_concrete|uk|limelight|bbc_radio_five_live||rtmp
+Deleting: mobile-emp|a_od_p004|iplayer_uk_stream_aac_rtmp_concrete|uk|limelight|bbc_radio_five_live_sports_extra||rtmp
+Deleting: mobile-emp|a_od_p004|iplayer_uk_stream_aac_rtmp_concrete|uk|limelight|bbc_radio_four||rtmp
+Deleting: mobile-emp|a_od_p004|iplayer_uk_stream_aac_rtmp_concrete|uk|limelight|bbc_radio_four_extra||rtmp
+Deleting: mobile-emp|a_od_p004|iplayer_uk_stream_aac_rtmp_concrete|uk|limelight|bbc_radio_fourlw||rtmp
+Deleting: mobile-emp|a_od_p004|iplayer_uk_stream_aac_rtmp_concrete|uk|limelight|bbc_radio_one||rtmp
+Deleting: mobile-emp|a_od_p004|iplayer_uk_stream_aac_rtmp_concrete|uk|limelight|bbc_radio_three||rtmp
+Deleting: mobile-emp|a_od_p004|iplayer_uk_stream_aac_rtmp_concrete|uk|limelight|bbc_radio_two||rtmp
+Deleting: mobile-emp|a_od_p004|iplayer_uk_stream_aac_rtmp_concrete|uk|limelight|bbc_school_radio||rtmp
+Deleting: mobile-emp|v_od_p004|iplayer_streaming_h264_flv_vlo|uk|akamai_hls|||http
+Deleting: mobile-emp|v_od_p004|iplayer_streaming_h264_flv_vlo|uk|akamai_hls_https|||https
+Deleting: mobile-emp|v_od_p004|iplayer_streaming_h264_flv_vlo|uk|limelight|||rtmp
+Deleting: mobile-emp|v_od_p004|iplayer_streaming_h264_flv_vlo|uk|akamai|||rtmp
+iplayer-wii
+Params: service=
+media_set=^iplayer-wii$
+supplier=
+server=
+MAP=
+update_attr=
+update_value=
+Deleting: iplayer-wii|a_od_p004|iplayer_uk_stream_aac_wii_concrete|uk|akamai_wii|bbc_1xtra||https
+Deleting: iplayer-wii|a_od_p004|iplayer_uk_stream_aac_wii_concrete|uk|akamai_wii|bbc_6music||https
+Deleting: iplayer-wii|a_od_p004|iplayer_uk_stream_aac_wii_concrete|uk|akamai_wii|bbc_7||https
+Deleting: iplayer-wii|a_od_p004|iplayer_uk_stream_aac_wii_concrete|uk|akamai_wii|bbc_asian_network||https
+Deleting: iplayer-wii|a_od_p004|iplayer_uk_stream_aac_wii_concrete|uk|akamai_wii|bbc_radio_five_live||https
+Deleting: iplayer-wii|a_od_p004|iplayer_uk_stream_aac_wii_concrete|uk|akamai_wii|bbc_radio_five_live_sports_extra||https
+Deleting: iplayer-wii|a_od_p004|iplayer_uk_stream_aac_wii_concrete|uk|akamai_wii|bbc_radio_four||https
+Deleting: iplayer-wii|a_od_p004|iplayer_uk_stream_aac_wii_concrete|uk|akamai_wii|bbc_radio_four_extra||https
+Deleting: iplayer-wii|a_od_p004|iplayer_uk_stream_aac_wii_concrete|uk|akamai_wii|bbc_radio_fourlw||https
+Deleting: iplayer-wii|a_od_p004|iplayer_uk_stream_aac_wii_concrete|uk|akamai_wii|bbc_radio_one||https
+Deleting: iplayer-wii|a_od_p004|iplayer_uk_stream_aac_wii_concrete|uk|akamai_wii|bbc_radio_three||https
+Deleting: iplayer-wii|a_od_p004|iplayer_uk_stream_aac_wii_concrete|uk|akamai_wii|bbc_radio_two||https
+Deleting: iplayer-wii|a_od_p004|iplayer_uk_stream_aac_wii_concrete|uk|akamai_wii|bbc_school_radio||https
+Deleting: iplayer-wii|a_od_p010|audio_streaming_aac_med_uk|uk|akamai_wii|||https
+Deleting: iplayer-wii|v_od_p003|iplayer_wii|uk|akamai_wii|||https
+freesat
+Params: service=
+media_set=^freesat$
+supplier=
+server=
+MAP=
+update_attr=
+update_value=
+flash-iplayer-sd-ns
+Params: service=
+media_set=^flash-iplayer-sd-ns$
+supplier=
+server=
+MAP=
+update_attr=
+update_value=
+Deleting: flash-iplayer-sd-ns|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_1xtra||rtmp
+Deleting: flash-iplayer-sd-ns|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_6music||rtmp
+Deleting: flash-iplayer-sd-ns|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_7||rtmp
+Deleting: flash-iplayer-sd-ns|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_asian_network||rtmp
+Deleting: flash-iplayer-sd-ns|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_radio_five_live||rtmp
+Deleting: flash-iplayer-sd-ns|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_radio_five_live_sports_extra||rtmp
+Deleting: flash-iplayer-sd-ns|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_radio_four||rtmp
+Deleting: flash-iplayer-sd-ns|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_radio_four_extra||rtmp
+Deleting: flash-iplayer-sd-ns|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_radio_fourlw||rtmp
+Deleting: flash-iplayer-sd-ns|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_radio_one||rtmp
+Deleting: flash-iplayer-sd-ns|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_radio_three||rtmp
+Deleting: flash-iplayer-sd-ns|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_radio_two||rtmp
+Deleting: flash-iplayer-sd-ns|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_school_radio||rtmp
+Deleting: flash-iplayer-sd-ns|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_schools_radio||rtmp
+Deleting: flash-iplayer-sd-ns|a_od_p010|audio_streaming_aac_med_uk|uk|limelight_ns|||rtmp
+Deleting: flash-iplayer-sd-ns|s_od_p001|captions|uk|http|||
+Deleting: flash-iplayer-sd-ns|v_od_p006|iplayer_stb_streaming_sd|uk|limelight_ns|||rtmp
+Deleting: flash-iplayer-sd-ns|v_od_p006|iplayer_stb_streaming_sd|uk|akamai_ns|||rtmp
+Deleting: flash-iplayer-sd-ns|v_od_p007|iptv_streaming_1500|uk|limelight_ns|||rtmp
+Deleting: flash-iplayer-sd-ns|v_od_p007|iptv_streaming_1500|uk|akamai_ns|||rtmp
+flash-iplayer-sd
+Params: service=
+media_set=^flash-iplayer-sd$
+supplier=
+server=
+MAP=
+update_attr=
+update_value=
+Deleting: flash-iplayer-sd|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_1xtra||rtmp
+Deleting: flash-iplayer-sd|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_6music||rtmp
+Deleting: flash-iplayer-sd|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_7||rtmp
+Deleting: flash-iplayer-sd|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_asian_network||rtmp
+Deleting: flash-iplayer-sd|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_radio_five_live||rtmp
+Deleting: flash-iplayer-sd|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_radio_five_live_sports_extra||rtmp
+Deleting: flash-iplayer-sd|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_radio_four||rtmp
+Deleting: flash-iplayer-sd|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_radio_four_extra||rtmp
+Deleting: flash-iplayer-sd|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_radio_fourlw||rtmp
+Deleting: flash-iplayer-sd|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_radio_one||rtmp
+Deleting: flash-iplayer-sd|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_radio_three||rtmp
+Deleting: flash-iplayer-sd|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_radio_two||rtmp
+Deleting: flash-iplayer-sd|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_school_radio||rtmp
+Deleting: flash-iplayer-sd|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_schools_radio||rtmp
+Deleting: flash-iplayer-sd|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight|bbc_1xtra||rtmp
+Deleting: flash-iplayer-sd|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight|bbc_6music||rtmp
+Deleting: flash-iplayer-sd|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight|bbc_7||rtmp
+Deleting: flash-iplayer-sd|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight|bbc_asian_network||rtmp
+Deleting: flash-iplayer-sd|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight|bbc_radio_five_live||rtmp
+Deleting: flash-iplayer-sd|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight|bbc_radio_five_live_sports_extra||rtmp
+Deleting: flash-iplayer-sd|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight|bbc_radio_four||rtmp
+Deleting: flash-iplayer-sd|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight|bbc_radio_four_extra||rtmp
+Deleting: flash-iplayer-sd|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight|bbc_radio_fourlw||rtmp
+Deleting: flash-iplayer-sd|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight|bbc_radio_one||rtmp
+Deleting: flash-iplayer-sd|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight|bbc_radio_three||rtmp
+Deleting: flash-iplayer-sd|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight|bbc_radio_two||rtmp
+Deleting: flash-iplayer-sd|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight|bbc_school_radio||rtmp
+Deleting: flash-iplayer-sd|a_od_p010|audio_streaming_aac_med_uk|uk|limelight|||rtmp
+Deleting: flash-iplayer-sd|s_od_p001|captions|uk|http|||http
+Deleting: flash-iplayer-sd|s_od_p001|captions|uk|sis_closed|||https
+Deleting: flash-iplayer-sd|v_od_p006|iplayer_stb_streaming_sd|uk|akamai_hls|||https
+Deleting: flash-iplayer-sd|v_od_p006|iplayer_stb_streaming_sd|uk|ll_http|||http
+Deleting: flash-iplayer-sd|v_od_p006|iplayer_stb_streaming_sd|uk|akamai_http|||http
+Deleting: flash-iplayer-sd|v_od_p006|iplayer_stb_streaming_sd|uk|limelight|||rtmp
+Deleting: flash-iplayer-sd|v_od_p006|iplayer_stb_streaming_sd|uk|limelight_ns|||rtmp
+Deleting: flash-iplayer-sd|v_od_p006|iplayer_stb_streaming_sd|uk|akamai|||rtmp
+Deleting: flash-iplayer-sd|v_od_p006|iplayer_stb_streaming_sd|uk|akamai_ns|||rtmp
+Deleting: flash-iplayer-sd|v_od_p009|iplayer_stb_streaming_sd_high|uk|ll_http|||http
+Deleting: flash-iplayer-sd|v_od_p009|iplayer_stb_streaming_sd_high|uk|akamai_http|||http
+Deleting: flash-iplayer-sd|v_od_p009|iplayer_stb_streaming_sd_high|uk|limelight|||rtmp
+Deleting: flash-iplayer-sd|v_od_p009|iplayer_stb_streaming_sd_high|uk|limelight_ns|||rtmp
+Deleting: flash-iplayer-sd|v_od_p009|iplayer_stb_streaming_sd_high|uk|akamai|||rtmp
+Deleting: flash-iplayer-sd|v_od_p009|iplayer_stb_streaming_sd_high|uk|akamai_ns|||rtmp
+flash-iplayer-hd-ns
+Params: service=
+media_set=^flash-iplayer-hd-ns$
+supplier=
+server=
+MAP=
+update_attr=
+update_value=
+Deleting: flash-iplayer-hd-ns|v_od_p008|iplayer_stb_streaming_hd|uk|akamai_ns|||rtmp
+flash-iplayer-hd
+Params: service=
+media_set=^flash-iplayer-hd$
+supplier=
+server=
+MAP=
+update_attr=
+update_value=
+Deleting: flash-iplayer-hd|s_od_p001|captions|uk|http|||http
+Deleting: flash-iplayer-hd|s_od_p001|captions|uk|sis_closed|||https
+Deleting: flash-iplayer-hd|v_od_p008|iplayer_stb_streaming_hd|uk|akamai_hls|||https
+Deleting: flash-iplayer-hd|v_od_p008|iplayer_stb_streaming_hd|uk|ll_http|||http
+Deleting: flash-iplayer-hd|v_od_p008|iplayer_stb_streaming_hd|uk|akamai_http|||http
+Deleting: flash-iplayer-hd|v_od_p008|iplayer_stb_streaming_hd|uk|akamai|||rtmp
+Deleting: flash-iplayer-hd|v_od_p008|iplayer_stb_streaming_hd|uk|akamai_ns|||rtmp
+flash-iplayer-all-ns
+Params: service=
+media_set=^flash-iplayer-all-ns$
+supplier=
+server=
+MAP=
+update_attr=
+update_value=
+Deleting: flash-iplayer-all-ns|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_1xtra||rtmp
+Deleting: flash-iplayer-all-ns|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_6music||rtmp
+Deleting: flash-iplayer-all-ns|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_7||rtmp
+Deleting: flash-iplayer-all-ns|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_asian_network||rtmp
+Deleting: flash-iplayer-all-ns|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_radio_five_live||rtmp
+Deleting: flash-iplayer-all-ns|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_radio_five_live_sports_extra||rtmp
+Deleting: flash-iplayer-all-ns|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_radio_four||rtmp
+Deleting: flash-iplayer-all-ns|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_radio_four_extra||rtmp
+Deleting: flash-iplayer-all-ns|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_radio_fourlw||rtmp
+Deleting: flash-iplayer-all-ns|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_radio_one||rtmp
+Deleting: flash-iplayer-all-ns|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_radio_three||rtmp
+Deleting: flash-iplayer-all-ns|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_radio_two||rtmp
+Deleting: flash-iplayer-all-ns|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_school_radio||rtmp
+Deleting: flash-iplayer-all-ns|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_schools_radio||rtmp
+Deleting: flash-iplayer-all-ns|a_od_p010|audio_streaming_aac_med_uk|uk|limelight_ns|||rtmp
+Deleting: flash-iplayer-all-ns|s_od_p001|captions|uk|http|||
+Deleting: flash-iplayer-all-ns|v_od_p006|iplayer_stb_streaming_sd|uk|limelight_ns|||rtmp
+Deleting: flash-iplayer-all-ns|v_od_p006|iplayer_stb_streaming_sd|uk|akamai_ns|||rtmp
+Deleting: flash-iplayer-all-ns|v_od_p006|iplayer_stb_streaming_sd|uk|btwcc_rtmp|||rtmp
+Deleting: flash-iplayer-all-ns|v_od_p007|iptv_streaming_1500|uk|limelight_ns|||rtmp
+Deleting: flash-iplayer-all-ns|v_od_p007|iptv_streaming_1500|uk|akamai_ns|||rtmp
+Deleting: flash-iplayer-all-ns|v_od_p007|iptv_streaming_1500|uk|btwcc_rtmp|||rtmp
+Deleting: flash-iplayer-all-ns|v_od_p008|iplayer_stb_streaming_hd|uk|akamai_ns|||rtmp
+Deleting: flash-iplayer-all-ns|v_od_p008|iplayer_stb_streaming_hd|uk|btwcc_rtmp|||rtmp
+bt-vision-wmp
+Params: service=
+media_set=^bt-vision-wmp$
+supplier=
+server=
+MAP=
+update_attr=
+update_value=
+Deleting: bt-vision-wmp|v_od_p016|iplayer_mobile_wmv|uk|licence|||http
+Deleting: bt-vision-wmp|v_od_p017|pc_download_wmv|uk|licence|||http
+bt-vision
+Params: service=
+media_set=^bt-vision$
+supplier=
+server=
+MAP=
+update_attr=
+update_value=
+Deleting: bt-vision|v_od_p017|iptv_streaming_bt|uk|btvision|||http
+Deleting: bt-vision|v_od_p032|iptv_streaming_bt|uk|btvision|||http
+apple-iphone2-hls
+Params: service=
+media_set=^apple-iphone2-hls$
+supplier=
+server=
+MAP=
+update_attr=
+update_value=
+Deleting: apple-iphone2-hls|a_od_p004|iplayer_intl_stream_aac_ws_concrete|world|akamai|||rtmp
+Deleting: apple-iphone2-hls|a_od_p004|ibroadcast_audio_mobile|uk|akamai_hls_open|||http
+Deleting: apple-iphone2-hls|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_1xtra||rtmp
+Deleting: apple-iphone2-hls|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_6music||rtmp
+Deleting: apple-iphone2-hls|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_7||rtmp
+Deleting: apple-iphone2-hls|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_asian_network||rtmp
+Deleting: apple-iphone2-hls|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_radio_five_live||rtmp
+Deleting: apple-iphone2-hls|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_radio_five_live_sports_extra||rtmp
+Deleting: apple-iphone2-hls|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_radio_four||rtmp
+Deleting: apple-iphone2-hls|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_radio_four_extra||rtmp
+Deleting: apple-iphone2-hls|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_radio_fourlw||rtmp
+Deleting: apple-iphone2-hls|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_radio_one||rtmp
+Deleting: apple-iphone2-hls|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_radio_three||rtmp
+Deleting: apple-iphone2-hls|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_radio_two||rtmp
+Deleting: apple-iphone2-hls|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_school_radio||rtmp
+Deleting: apple-iphone2-hls|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_schools_radio||rtmp
+Deleting: apple-iphone2-hls|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight|bbc_1xtra||rtmp
+Deleting: apple-iphone2-hls|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight|bbc_6music||rtmp
+Deleting: apple-iphone2-hls|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight|bbc_7||rtmp
+Deleting: apple-iphone2-hls|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight|bbc_asian_network||rtmp
+Deleting: apple-iphone2-hls|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight|bbc_radio_five_live||rtmp
+Deleting: apple-iphone2-hls|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight|bbc_radio_five_live_sports_extra||rtmp
+Deleting: apple-iphone2-hls|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight|bbc_radio_four||rtmp
+Deleting: apple-iphone2-hls|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight|bbc_radio_four_extra||rtmp
+Deleting: apple-iphone2-hls|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight|bbc_radio_fourlw||rtmp
+Deleting: apple-iphone2-hls|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight|bbc_radio_one||rtmp
+Deleting: apple-iphone2-hls|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight|bbc_radio_three||rtmp
+Deleting: apple-iphone2-hls|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight|bbc_radio_two||rtmp
+Deleting: apple-iphone2-hls|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight|bbc_school_radio||rtmp
+Deleting: apple-iphone2-hls|s_od_p001|captions|uk|http|||http
+Deleting: apple-iphone2-hls|s_od_p001|captions|uk|sis_closed|||https
+Deleting: apple-iphone2-hls|v_od_p001|mobile_streaming_100|uk|akamai_hls_open|||http
+Deleting: apple-iphone2-hls|v_od_p001|mobile_streaming_100|uk|limelight|||rtmp
+Deleting: apple-iphone2-hls|v_od_p001|mobile_streaming_100|uk|akamai|||rtmp
+Deleting: apple-iphone2-hls|v_od_p002|mobile_streaming_200|uk|akamai|||rtmp
+Deleting: apple-iphone2-hls|v_od_p002|mobile_streaming_200|uk|akamai_hls_open|||http
+Deleting: apple-iphone2-hls|v_od_p002|mobile_streaming_200|uk|limelight|||rtmp
+Deleting: apple-iphone2-hls|v_od_p004|iplayer_streaming_h264_flv_vlo|uk|akamai_hls_open|||http
+Deleting: apple-iphone2-hls|v_od_p004|iplayer_streaming_h264_flv_vlo|uk|limelight|||rtmp
+Deleting: apple-iphone2-hls|v_od_p004|iplayer_streaming_h264_flv_vlo|uk|akamai|||rtmp
+apple-ipad
+Params: service=
+media_set=^apple-ipad$
+supplier=
+server=
+MAP=
+update_attr=
+update_value=
+Deleting: apple-ipad|a_od_p004|iplayer_intl_stream_aac_ws_concrete|world|akamai|||rtmp
+Deleting: apple-ipad|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_1xtra||rtmp
+Deleting: apple-ipad|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_6music||rtmp
+Deleting: apple-ipad|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_7||rtmp
+Deleting: apple-ipad|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_asian_network||rtmp
+Deleting: apple-ipad|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_radio_five_live||rtmp
+Deleting: apple-ipad|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_radio_five_live_sports_extra||rtmp
+Deleting: apple-ipad|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_radio_four||rtmp
+Deleting: apple-ipad|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_radio_four_extra||rtmp
+Deleting: apple-ipad|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_radio_fourlw||rtmp
+Deleting: apple-ipad|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_radio_one||rtmp
+Deleting: apple-ipad|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_radio_three||rtmp
+Deleting: apple-ipad|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_radio_two||rtmp
+Deleting: apple-ipad|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_school_radio||rtmp
+Deleting: apple-ipad|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_schools_radio||rtmp
+Deleting: apple-ipad|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight|bbc_1xtra||rtmp
+Deleting: apple-ipad|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight|bbc_6music||rtmp
+Deleting: apple-ipad|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight|bbc_7||rtmp
+Deleting: apple-ipad|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight|bbc_asian_network||rtmp
+Deleting: apple-ipad|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight|bbc_radio_five_live||rtmp
+Deleting: apple-ipad|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight|bbc_radio_five_live_sports_extra||rtmp
+Deleting: apple-ipad|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight|bbc_radio_four||rtmp
+Deleting: apple-ipad|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight|bbc_radio_four_extra||rtmp
+Deleting: apple-ipad|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight|bbc_radio_fourlw||rtmp
+Deleting: apple-ipad|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight|bbc_radio_one||rtmp
+Deleting: apple-ipad|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight|bbc_radio_three||rtmp
+Deleting: apple-ipad|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight|bbc_radio_two||rtmp
+Deleting: apple-ipad|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight|bbc_school_radio||rtmp
+Deleting: apple-ipad|v_od_p006|iplayer_stbx_streaming_sd|uk|ll_https|||https
+Deleting: apple-ipad|v_od_p006|iplayer_stbx_streaming_sd|uk|ll_http|||http
+Deleting: apple-ipad|v_od_p006|iplayer_stbx_streaming_sd|uk|akamai_http|||http
+Deleting: apple-ipad|v_od_p010|iplayer_stbx_streaming_sd_high|uk|ll_https|||https
+Deleting: apple-ipad|v_od_p010|iplayer_stbx_streaming_sd_high|uk|ll_http|||http
+Deleting: apple-ipad|v_od_p010|iplayer_stbx_streaming_sd_high|uk|akamai_http|||http
+apple-i-family
+Params: service=
+media_set=^apple-i-family$
+supplier=
+server=
+MAP=
+update_attr=
+update_value=
+Deleting: apple-i-family|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_1xtra||rtmp
+Deleting: apple-i-family|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_6music||rtmp
+Deleting: apple-i-family|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_7||rtmp
+Deleting: apple-i-family|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_asian_network||rtmp
+Deleting: apple-i-family|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_radio_five_live||rtmp
+Deleting: apple-i-family|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_radio_five_live_sports_extra||rtmp
+Deleting: apple-i-family|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_radio_four||rtmp
+Deleting: apple-i-family|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_radio_four_extra||rtmp
+Deleting: apple-i-family|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_radio_fourlw||rtmp
+Deleting: apple-i-family|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_radio_one||rtmp
+Deleting: apple-i-family|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_radio_three||rtmp
+Deleting: apple-i-family|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_radio_two||rtmp
+Deleting: apple-i-family|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_school_radio||rtmp
+Deleting: apple-i-family|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight_ns|bbc_schools_radio||rtmp
+Deleting: apple-i-family|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight|bbc_1xtra||rtmp
+Deleting: apple-i-family|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight|bbc_6music||rtmp
+Deleting: apple-i-family|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight|bbc_7||rtmp
+Deleting: apple-i-family|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight|bbc_asian_network||rtmp
+Deleting: apple-i-family|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight|bbc_radio_five_live||rtmp
+Deleting: apple-i-family|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight|bbc_radio_five_live_sports_extra||rtmp
+Deleting: apple-i-family|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight|bbc_radio_four||rtmp
+Deleting: apple-i-family|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight|bbc_radio_four_extra||rtmp
+Deleting: apple-i-family|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight|bbc_radio_fourlw||rtmp
+Deleting: apple-i-family|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight|bbc_radio_one||rtmp
+Deleting: apple-i-family|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight|bbc_radio_three||rtmp
+Deleting: apple-i-family|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight|bbc_radio_two||rtmp
+Deleting: apple-i-family|a_od_p004|iplayer_stb_uk_stream_aac_concrete|uk|limelight|bbc_school_radio||rtmp
+3gp-mobile-wifi
+Params: service=
+media_set=^3gp-mobile-wifi$
+supplier=
+server=
+MAP=
+update_attr=
+update_value=
+Deleting: 3gp-mobile-wifi|a_od_p002|iplayer_uk_stream_aac_3gp_concrete|uk|sis|bbc_1xtra||http
+Deleting: 3gp-mobile-wifi|a_od_p002|iplayer_uk_stream_aac_3gp_concrete|uk|sis|bbc_6music||http
+Deleting: 3gp-mobile-wifi|a_od_p002|iplayer_uk_stream_aac_3gp_concrete|uk|sis|bbc_7||http
+Deleting: 3gp-mobile-wifi|a_od_p002|iplayer_uk_stream_aac_3gp_concrete|uk|sis|bbc_asian_network||http
+Deleting: 3gp-mobile-wifi|a_od_p002|iplayer_uk_stream_aac_3gp_concrete|uk|sis|bbc_radio_five_live||http
+Deleting: 3gp-mobile-wifi|a_od_p002|iplayer_uk_stream_aac_3gp_concrete|uk|sis|bbc_radio_five_live_sports_extra||http
+Deleting: 3gp-mobile-wifi|a_od_p002|iplayer_uk_stream_aac_3gp_concrete|uk|sis|bbc_radio_four||http
+Deleting: 3gp-mobile-wifi|a_od_p002|iplayer_uk_stream_aac_3gp_concrete|uk|sis|bbc_radio_four_extra||http
+Deleting: 3gp-mobile-wifi|a_od_p002|iplayer_uk_stream_aac_3gp_concrete|uk|sis|bbc_radio_fourlw||http
+Deleting: 3gp-mobile-wifi|a_od_p002|iplayer_uk_stream_aac_3gp_concrete|uk|sis|bbc_radio_one||http
+Deleting: 3gp-mobile-wifi|a_od_p002|iplayer_uk_stream_aac_3gp_concrete|uk|sis|bbc_radio_three||http
+Deleting: 3gp-mobile-wifi|a_od_p002|iplayer_uk_stream_aac_3gp_concrete|uk|sis|bbc_radio_two||http
+Deleting: 3gp-mobile-wifi|a_od_p002|iplayer_uk_stream_aac_3gp_concrete|uk|sis|bbc_school_radio||http
+Deleting: 3gp-mobile-wifi|v_od_p002|iplayer_streaming_n95_wifi|uk|sis|||http
+3gp-mobile-generic
+Params: service=
+media_set=^3gp-mobile-generic$
+supplier=
+server=
+MAP=
+update_attr=
+update_value=
+Deleting: 3gp-mobile-generic|a_od_p002|iplayer_uk_stream_aac_3gp_concrete|uk|sis|bbc_1xtra||http
+Deleting: 3gp-mobile-generic|a_od_p002|iplayer_uk_stream_aac_3gp_concrete|uk|sis|bbc_6music||http
+Deleting: 3gp-mobile-generic|a_od_p002|iplayer_uk_stream_aac_3gp_concrete|uk|sis|bbc_7||http
+Deleting: 3gp-mobile-generic|a_od_p002|iplayer_uk_stream_aac_3gp_concrete|uk|sis|bbc_asian_network||http
+Deleting: 3gp-mobile-generic|a_od_p002|iplayer_uk_stream_aac_3gp_concrete|uk|sis|bbc_radio_five_live||http
+Deleting: 3gp-mobile-generic|a_od_p002|iplayer_uk_stream_aac_3gp_concrete|uk|sis|bbc_radio_five_live_sports_extra||http
+Deleting: 3gp-mobile-generic|a_od_p002|iplayer_uk_stream_aac_3gp_concrete|uk|sis|bbc_radio_four||http
+Deleting: 3gp-mobile-generic|a_od_p002|iplayer_uk_stream_aac_3gp_concrete|uk|sis|bbc_radio_four_extra||http
+Deleting: 3gp-mobile-generic|a_od_p002|iplayer_uk_stream_aac_3gp_concrete|uk|sis|bbc_radio_fourlw||http
+Deleting: 3gp-mobile-generic|a_od_p002|iplayer_uk_stream_aac_3gp_concrete|uk|sis|bbc_radio_one||http
+Deleting: 3gp-mobile-generic|a_od_p002|iplayer_uk_stream_aac_3gp_concrete|uk|sis|bbc_radio_three||http
+Deleting: 3gp-mobile-generic|a_od_p002|iplayer_uk_stream_aac_3gp_concrete|uk|sis|bbc_radio_two||http
+Deleting: 3gp-mobile-generic|a_od_p002|iplayer_uk_stream_aac_3gp_concrete|uk|sis|bbc_school_radio||http
+Deleting: 3gp-mobile-generic|v_od_p001|iplayer_streaming_n95_3g|uk|sis|||http
+Deleting: 3gp-mobile-generic|v_od_p002|iplayer_streaming_n95_wifi|uk|sis|||http
+3gp-mobile-3g
+Params: service=
+media_set=^3gp-mobile-3g$
+supplier=
+server=
+MAP=
+update_attr=
+update_value=
+Deleting: 3gp-mobile-3g|a_od_p002|iplayer_uk_stream_aac_3gp_concrete|uk|sis|bbc_1xtra||http
+Deleting: 3gp-mobile-3g|a_od_p002|iplayer_uk_stream_aac_3gp_concrete|uk|sis|bbc_6music||http
+Deleting: 3gp-mobile-3g|a_od_p002|iplayer_uk_stream_aac_3gp_concrete|uk|sis|bbc_7||http
+Deleting: 3gp-mobile-3g|a_od_p002|iplayer_uk_stream_aac_3gp_concrete|uk|sis|bbc_asian_network||http
+Deleting: 3gp-mobile-3g|a_od_p002|iplayer_uk_stream_aac_3gp_concrete|uk|sis|bbc_radio_five_live||http
+Deleting: 3gp-mobile-3g|a_od_p002|iplayer_uk_stream_aac_3gp_concrete|uk|sis|bbc_radio_five_live_sports_extra||http
+Deleting: 3gp-mobile-3g|a_od_p002|iplayer_uk_stream_aac_3gp_concrete|uk|sis|bbc_radio_four||http
+Deleting: 3gp-mobile-3g|a_od_p002|iplayer_uk_stream_aac_3gp_concrete|uk|sis|bbc_radio_four_extra||http
+Deleting: 3gp-mobile-3g|a_od_p002|iplayer_uk_stream_aac_3gp_concrete|uk|sis|bbc_radio_fourlw||http
+Deleting: 3gp-mobile-3g|a_od_p002|iplayer_uk_stream_aac_3gp_concrete|uk|sis|bbc_radio_one||http
+Deleting: 3gp-mobile-3g|a_od_p002|iplayer_uk_stream_aac_3gp_concrete|uk|sis|bbc_radio_three||http
+Deleting: 3gp-mobile-3g|a_od_p002|iplayer_uk_stream_aac_3gp_concrete|uk|sis|bbc_radio_two||http
+Deleting: 3gp-mobile-3g|a_od_p002|iplayer_uk_stream_aac_3gp_concrete|uk|sis|bbc_school_radio||http
+Deleting: 3gp-mobile-3g|v_od_p001|iplayer_streaming_n95_3g|uk|sis|||http
+wmp
+Params: service=
+media_set=^wmp$
+supplier=
+server=
+MAP=
+update_attr=
+update_value=
+Deleting: wmp|v_od_p016|iplayer_mobile_wmv|uk|licence|||http
+Deleting: wmp|v_od_p017|pc_download_wmv|uk|licence|||http
+wii
+Params: service=
+media_set=^wii$
+supplier=
+server=
+MAP=
+update_attr=
+update_value=
+Deleting: wii|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_1xtra||rtmp
+Deleting: wii|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_6music||rtmp
+Deleting: wii|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_7||rtmp
+Deleting: wii|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_asian_network||rtmp
+Deleting: wii|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_cymru||rtmp
+Deleting: wii|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_five_live||rtmp
+Deleting: wii|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_five_live_sports_extra||rtmp
+Deleting: wii|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_four||rtmp
+Deleting: wii|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_fourlw||rtmp
+Deleting: wii|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_foyle||rtmp
+Deleting: wii|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_nan_gaidheal||rtmp
+Deleting: wii|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_one||rtmp
+Deleting: wii|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_orkney||rtmp
+Deleting: wii|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_scotland||rtmp
+Deleting: wii|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_scotland_fm||rtmp
+Deleting: wii|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_scotland_highlands_and_islands||rtmp
+Deleting: wii|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_scotland_mw||rtmp
+Deleting: wii|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_shetland||rtmp
+Deleting: wii|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_three||rtmp
+Deleting: wii|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_two||rtmp
+Deleting: wii|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_ulster||rtmp
+Deleting: wii|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_wales||rtmp
+Deleting: wii|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_wales_am||rtmp
+Deleting: wii|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_wales_fm||rtmp
+Deleting: wii|a_od_p006|iplayer_intl_stream_mp3|world|akamai|localradio||rtmp
+stbx-sd-med-h264
+Params: service=
+media_set=^stbx-sd-med-h264$
+supplier=
+server=
+MAP=
+update_attr=
+update_value=
+Deleting: stbx-sd-med-h264|s_od_p001|captions|uk|http|||http
+Deleting: stbx-sd-med-h264|s_od_p001|captions|uk|sis_closed|||https
+Deleting: stbx-sd-med-h264|v_od_p006|iplayer_stbx_streaming_sd|uk|ll_https|||https
+Deleting: stbx-sd-med-h264|v_od_p006|iplayer_stbx_streaming_sd|uk|ll_http|||http
+Deleting: stbx-sd-med-h264|v_od_p006|iplayer_stbx_streaming_sd|uk|akamai_http|||http
+stbx-sd-all-h264
+Params: service=
+media_set=^stbx-sd-all-h264$
+supplier=
+server=
+MAP=
+update_attr=
+update_value=
+Deleting: stbx-sd-all-h264|s_od_p001|captions|uk|http|||http
+Deleting: stbx-sd-all-h264|s_od_p001|captions|uk|sis_closed|||https
+Deleting: stbx-sd-all-h264|v_od_p006|iplayer_stbx_streaming_sd|uk|ll_https|||https
+Deleting: stbx-sd-all-h264|v_od_p006|iplayer_stbx_streaming_sd|uk|ll_http|||http
+Deleting: stbx-sd-all-h264|v_od_p006|iplayer_stbx_streaming_sd|uk|akamai_http|||http
+Deleting: stbx-sd-all-h264|v_od_p010|iplayer_stbx_streaming_sd_high|uk|ll_https|||https
+Deleting: stbx-sd-all-h264|v_od_p010|iplayer_stbx_streaming_sd_high|uk|ll_http|||http
+Deleting: stbx-sd-all-h264|v_od_p010|iplayer_stbx_streaming_sd_high|uk|akamai_http|||http
+ps3
+Params: service=
+media_set=^ps3$
+supplier=
+server=
+MAP=
+update_attr=
+update_value=
+Deleting: ps3|a_od_p003|iplayer_uk_stream_aac_rtmp_lo_concrete|uk|limelight|bbc_1xtra||rtmp
+Deleting: ps3|a_od_p003|iplayer_uk_stream_aac_rtmp_lo_concrete|uk|limelight|bbc_6music||rtmp
+Deleting: ps3|a_od_p003|iplayer_uk_stream_aac_rtmp_lo_concrete|uk|limelight|bbc_7||rtmp
+Deleting: ps3|a_od_p003|iplayer_uk_stream_aac_rtmp_lo_concrete|uk|limelight|bbc_asian_network||rtmp
+Deleting: ps3|a_od_p003|iplayer_uk_stream_aac_rtmp_lo_concrete|uk|limelight|bbc_radio_five_live||rtmp
+Deleting: ps3|a_od_p003|iplayer_uk_stream_aac_rtmp_lo_concrete|uk|limelight|bbc_radio_five_live_sports_extra||rtmp
+Deleting: ps3|a_od_p003|iplayer_uk_stream_aac_rtmp_lo_concrete|uk|limelight|bbc_radio_four||rtmp
+Deleting: ps3|a_od_p003|iplayer_uk_stream_aac_rtmp_lo_concrete|uk|limelight|bbc_radio_four_extra||rtmp
+Deleting: ps3|a_od_p003|iplayer_uk_stream_aac_rtmp_lo_concrete|uk|limelight|bbc_radio_fourlw||rtmp
+Deleting: ps3|a_od_p003|iplayer_uk_stream_aac_rtmp_lo_concrete|uk|limelight|bbc_radio_one||rtmp
+Deleting: ps3|a_od_p003|iplayer_uk_stream_aac_rtmp_lo_concrete|uk|limelight|bbc_radio_three||rtmp
+Deleting: ps3|a_od_p003|iplayer_uk_stream_aac_rtmp_lo_concrete|uk|limelight|bbc_radio_two||rtmp
+Deleting: ps3|a_od_p003|iplayer_uk_stream_aac_rtmp_lo_concrete|uk|limelight|bbc_school_radio||rtmp
+Deleting: ps3|a_od_p004|iplayer_intl_stream_aac_ws_concrete|world|akamai|||rtmp
+Deleting: ps3|a_od_p004|iplayer_uk_stream_aac_rtmp_concrete|uk|limelight|bbc_1xtra||rtmp
+Deleting: ps3|a_od_p004|iplayer_uk_stream_aac_rtmp_concrete|uk|limelight|bbc_6music||rtmp
+Deleting: ps3|a_od_p004|iplayer_uk_stream_aac_rtmp_concrete|uk|limelight|bbc_7||rtmp
+Deleting: ps3|a_od_p004|iplayer_uk_stream_aac_rtmp_concrete|uk|limelight|bbc_asian_network||rtmp
+Deleting: ps3|a_od_p004|iplayer_uk_stream_aac_rtmp_concrete|uk|limelight|bbc_radio_five_live||rtmp
+Deleting: ps3|a_od_p004|iplayer_uk_stream_aac_rtmp_concrete|uk|limelight|bbc_radio_five_live_sports_extra||rtmp
+Deleting: ps3|a_od_p004|iplayer_uk_stream_aac_rtmp_concrete|uk|limelight|bbc_radio_four||rtmp
+Deleting: ps3|a_od_p004|iplayer_uk_stream_aac_rtmp_concrete|uk|limelight|bbc_radio_four_extra||rtmp
+Deleting: ps3|a_od_p004|iplayer_uk_stream_aac_rtmp_concrete|uk|limelight|bbc_radio_fourlw||rtmp
+Deleting: ps3|a_od_p004|iplayer_uk_stream_aac_rtmp_concrete|uk|limelight|bbc_radio_one||rtmp
+Deleting: ps3|a_od_p004|iplayer_uk_stream_aac_rtmp_concrete|uk|limelight|bbc_radio_three||rtmp
+Deleting: ps3|a_od_p004|iplayer_uk_stream_aac_rtmp_concrete|uk|limelight|bbc_radio_two||rtmp
+Deleting: ps3|a_od_p004|iplayer_uk_stream_aac_rtmp_concrete|uk|limelight|bbc_school_radio||rtmp
+Deleting: ps3|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_1xtra||rtmp
+Deleting: ps3|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_6music||rtmp
+Deleting: ps3|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_7||rtmp
+Deleting: ps3|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_asian_network||rtmp
+Deleting: ps3|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_cymru||rtmp
+Deleting: ps3|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_five_live||rtmp
+Deleting: ps3|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_five_live_sports_extra||rtmp
+Deleting: ps3|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_four||rtmp
+Deleting: ps3|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_fourlw||rtmp
+Deleting: ps3|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_foyle||rtmp
+Deleting: ps3|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_nan_gaidheal||rtmp
+Deleting: ps3|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_one||rtmp
+Deleting: ps3|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_orkney||rtmp
+Deleting: ps3|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_scotland||rtmp
+Deleting: ps3|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_scotland_fm||rtmp
+Deleting: ps3|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_scotland_highlands_and_islands||rtmp
+Deleting: ps3|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_scotland_mw||rtmp
+Deleting: ps3|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_shetland||rtmp
+Deleting: ps3|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_three||rtmp
+Deleting: ps3|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_two||rtmp
+Deleting: ps3|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_ulster||rtmp
+Deleting: ps3|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_wales||rtmp
+Deleting: ps3|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_wales_am||rtmp
+Deleting: ps3|a_od_p006|iplayer_intl_stream_mp3|world|akamai|bbc_radio_wales_fm||rtmp
+Deleting: ps3|a_od_p006|iplayer_intl_stream_mp3|world|akamai|localradio||rtmp
+Deleting: ps3|v_od_p005|iplayer_streaming_h264_flv_lo|uk|akamai_hds_vod|||http
+Deleting: ps3|v_od_p005|iplayer_streaming_h264_flv_lo|uk|limelight|||rtmp
+Deleting: ps3|v_od_p005|iplayer_streaming_h264_flv_lo|uk|akamai|||rtmp
+Deleting: ps3|v_od_p006|iplayer_streaming_h264_flv|uk|akamai_hds_vod|||http
+Deleting: ps3|v_od_p006|iplayer_streaming_h264_flv|uk|akamai|||rtmp
+Deleting: ps3|v_od_p006|iplayer_streaming_h264_flv|uk|limelight|||rtmp
+Deleting: ps3|v_od_p023|iplayer_broadband_streaming|uk|akamai|||rtmp
+Deleting: ps3|v_od_p023|iplayer_broadband_streaming|uk|limelight|||rtmp
+Deleting: ps3|v_od_p024|iplayer_streaming_h264_flv|uk|akamai_hds_vod|||http
+Deleting: ps3|v_od_p024|iplayer_streaming_h264_flv|uk|akamai|||rtmp
+Deleting: ps3|v_od_p024|iplayer_streaming_h264_flv|uk|limelight|||rtmp
+iptv-sbr-vod-sd
+Params: service=
+media_set=^iptv-sbr-vod-sd$
+supplier=
+server=
+MAP=
+update_attr=
+update_value=
+Deleting: iptv-sbr-vod-sd|s_od_p001|captions|uk|http|||http
+Deleting: iptv-sbr-vod-sd|s_od_p001|captions|uk|sis_closed|||https
+Deleting: iptv-sbr-vod-sd|v_od_p007|iptv_streaming_1500|uk|akamai_hls_open|||http
+Deleting: iptv-sbr-vod-sd|v_od_p018|journalism_world_stream_h264_http_hi|world|akamai_news_hls_open|||http
+Deleting: iptv-sbr-vod-sd|v_od_p018|journalism_nonuk_stream_h264_http_hi|nonuk|akamai_news_hls_open|||http
+Deleting: iptv-sbr-vod-sd|v_od_p018|journalism_uk_stream_h264_http_hi|uk|akamai_news_hls_open|||http
+Deleting: iptv-sbr-vod-sd|v_od_p019|journalism_world_stream_h264_http_med|world|akamai_news_hls_open|||http
+Deleting: iptv-sbr-vod-sd|v_od_p019|journalism_nonuk_stream_h264_http_med|nonuk|akamai_news_hls_open|||http
+Deleting: iptv-sbr-vod-sd|v_od_p019|journalism_uk_stream_h264_http_med|uk|akamai_news_hls_open|||http
+iptv-sbr-vod-hd
+Params: service=
+media_set=^iptv-sbr-vod-hd$
+supplier=
+server=
+MAP=
+update_attr=
+update_value=
+Deleting: iptv-sbr-vod-hd|s_od_p001|captions|uk|http|||http
+Deleting: iptv-sbr-vod-hd|s_od_p001|captions|uk|sis_closed|||https
+Deleting: iptv-sbr-vod-hd|v_od_p008|iplayer_stb_streaming_hd|uk|akamai_hls_open|||http
+Deleting: iptv-sbr-vod-hd|v_od_p018|journalism_world_stream_h264_http_hi|world|akamai_news_hls_open|||http
+Deleting: iptv-sbr-vod-hd|v_od_p018|journalism_nonuk_stream_h264_http_hi|nonuk|akamai_news_hls_open|||http
+Deleting: iptv-sbr-vod-hd|v_od_p018|journalism_uk_stream_h264_http_hi|uk|akamai_news_hls_open|||http
+Deleting: iptv-sbr-vod-hd|v_od_p019|journalism_world_stream_h264_http_med|world|akamai_news_hls_open|||http
+Deleting: iptv-sbr-vod-hd|v_od_p019|journalism_nonuk_stream_h264_http_med|nonuk|akamai_news_hls_open|||http
+Deleting: iptv-sbr-vod-hd|v_od_p019|journalism_uk_stream_h264_http_med|uk|akamai_news_hls_open|||http
