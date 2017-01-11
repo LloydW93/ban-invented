@@ -96,6 +96,7 @@ public class EmsgFragmentedMp4Builder extends FragmentedMp4Builder {
         TfxdBox tfxd = new TfxdBox();
         tfxd.fragmentAbsoluteTime = getBaseMediaDecodeTime(startSample, track);
         tfxd.fragmentAbsoluteDuration = getSampleDuration(startSample, track);
+        tfxd.setVersion(1);
         parent.addBox(tfxd);
     }
 
