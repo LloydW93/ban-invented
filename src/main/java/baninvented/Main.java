@@ -40,41 +40,6 @@ public class Main {
 	private static final int FRAGMENT_DURATION_SECONDS = 8;
 	private static final long EPOCH_TIMESTAMP_UTC = 0;
 
-	/**
-	 * The LiveServerManifestBox field and related fields comprise the data that
-	 * is provided to the server by the encoder. The data enables the server to
-	 * interpret the incoming live stream and assign semantic meaning to the
-	 * stream's tracks.
-	 */
-	public static class LiveServerManifestBox extends AbstractBox {
-		
-		protected LiveServerManifestBox(String manifest) {
-			super("uuid", new byte[] {(byte)0xA5, (byte)0xD4, 0x0B, 0x30, (byte)0xE8, 0x14, 0x11, (byte)0xDD, (byte)0xBA, 0x2F, 0x08, 0x00, 0x20, 0x0C, (byte)0x9A, 0x66});
-			this.manifest = manifest;
-		}
-
-		private String manifest;
-
-		@Override
-		protected long getContentSize() {
-			return Utf8.utf8StringLengthInBytes(manifest);
-		}
-
-		@Override
-		protected void getContent(ByteBuffer byteBuffer) {
-			if (manifest != null) {
-				byte[] bytes = Utf8.convert(manifest);
-				byteBuffer.put(bytes);
-			}
-		}
-
-		@Override
-		protected void _parseDetails(ByteBuffer content) {
-			manifest = IsoTypeReader.readString(content, content.remaining());
-		}
-
-	}
-
 	public static class DASHEventMessageBox extends AbstractFullBox {
 
 		private String scheme_id_uri;
@@ -158,7 +123,8 @@ public class Main {
 		private List<Meta> metas;
 
 		public MetaTrackImpl() {
-			super("timed metadata?");
+			super("meta");
+
 			sampleDescriptionBox = new SampleDescriptionBox();
 			sampleDescriptionBox.addBox(new URIMetaSampleEntry("http://www.bbc.co.uk/2016/dash/emsg"));
 			metas = new LinkedList<Meta>();
@@ -270,7 +236,6 @@ public class Main {
 		movie.addTrack(metaTrack);
 		builder.setFragmenter(new DefaultFragmenterImpl(FRAGMENT_DURATION_SECONDS));
 		Container mp4file = builder.build(movie);
-		mp4file.getBoxes().add(1, createManifestBox(metaTrack.getTrackMetaData()));
 		writeOut(mp4file);
 	}
 	
@@ -338,23 +303,6 @@ public class Main {
 			0,
 			id,
 			messageData);
-	}
-
-	private static LiveServerManifestBox createManifestBox(TrackMetaData trackMetaData) {
-		XMLBuilder2 doc = XMLBuilder2.create("smil");
-		doc.ns("http://www.w3.org/2001/SMIL20/Language")
-			.e("head")
-				.e("meta").a("name", "creator").a("content", "david.holroyd@bbc.co.uk")
-					.up()
-				.up()
-			.e("body")
-				.e("switch")
-					.e("ref").a("src", "Stream").a("systemLanguage", trackMetaData.getLanguage())
-						.e("param").a("name", "trackID").a("value", ""+trackMetaData.getTrackId()).a("valuetype", "data").up()
-						.e("param").a("name", "FourCC").a("value", "data").a("valuetype", "data").up()
-						.e("param").a("name", "trackName").a("value", "meta1").a("valuetype", "data").up()
-						.e("param").a("name", "timeScale").a("value", ""+trackMetaData.getTimescale()).a("valuetype", "data").up();
-		return new LiveServerManifestBox(asString(doc));
 	}
 
 	private static String asString(XMLBuilder2 doc) {

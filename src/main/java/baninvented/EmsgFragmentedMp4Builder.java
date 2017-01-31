@@ -14,6 +14,8 @@ import java.util.*;
 
 import static com.googlecode.mp4parser.util.CastUtils.l2i;
 
+import baninvented.KindBox;
+
 public class EmsgFragmentedMp4Builder extends FragmentedMp4Builder {
 	private long offset = 0L;
 
@@ -25,6 +27,25 @@ public class EmsgFragmentedMp4Builder extends FragmentedMp4Builder {
 		minf.addBox(createStbl(movie, track));
 		return minf;
 	}
+
+    // Exten the original to add the user metadata
+    protected Box createTrak(Track track, Movie movie) {
+        TrackBox trackBox = new TrackBox();
+        trackBox.addBox(createTkhd(movie, track));
+
+        UserDataBox userDataBox = new UserDataBox();
+        KindBox kindBox = new KindBox("urn:mpeg:dash:event:2012", "1");
+        userDataBox = new UserDataBox();
+        userDataBox.addBox(kindBox);
+        trackBox.addBox(userDataBox);
+
+        Box edts = createEdts(track, movie);
+        if (edts != null) {
+            trackBox.addBox(edts);
+        }
+        trackBox.addBox(createMdia(track, movie));
+        return trackBox;
+    }
 
 	protected void createTfdt(long startSample, Track track, TrackFragmentBox parent) {
         TrackFragmentBaseMediaDecodeTimeBox tfdt = new TrackFragmentBaseMediaDecodeTimeBox();
