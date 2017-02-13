@@ -250,7 +250,7 @@ public class Main {
 		// all these events refer to the same end-time
 		// the first emitted in-band event instance will be contained within
 		// the fragment that *contains* the given publishTime
-		final long fragDurationInMediaTime = FRAGMENT_DURATION_SECONDS * TIMESCALE;
+		final long fragDurationInMediaTime = (long)(FRAGMENT_DURATION_SECONDS * TIMESCALE);
 		final long endTimeInMediaTimeline = millisToMediaTime(end.getEndTime());
 		long publishTimeInMediaTime = millisToMediaTime(end.getPublishTime());
 		final long publishTimeWithinFragment = publishTimeInMediaTime % fragDurationInMediaTime;
