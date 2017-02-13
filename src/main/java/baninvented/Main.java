@@ -37,7 +37,7 @@ import baninvented.URIMetaSampleEntry;
 public class Main {
 
 	private static final int TIMESCALE = 10_000_000;
-	private static final int FRAGMENT_DURATION_SECONDS = 3.84;
+	private static final double FRAGMENT_DURATION_SECONDS = 3.84;
 	private static final long EPOCH_TIMESTAMP_UTC = 0;
 
 	public static class DASHEventMessageBox extends AbstractFullBox {
